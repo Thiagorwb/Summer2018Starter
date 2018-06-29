@@ -1,0 +1,116 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3903,        109]
+NotebookOptionsPosition[      3008,         83]
+NotebookOutlinePosition[      3349,         98]
+CellTagsIndexPosition[      3306,         95]
+WindowFrame->Normal*)
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Project Description", "Title",
+ CellChangeTimes->{{3.7392151300792212`*^9, 
+  3.7392151395033226`*^9}},ExpressionUUID->"f4174649-a4ac-419a-931e-\
+c1c53ce5f7ee"],
+
+Cell[CellGroupData[{
+
+Cell["Optimal Packing of Binary Unequal Circles", "Section",
+ CellChangeTimes->{{3.7392151528190627`*^9, 3.7392152654173627`*^9}, {
+  3.739215963785922*^9, 3.739215965074594*^9}, {3.739217638836228*^9, 
+  3.739217651640148*^9}, {3.739217832837202*^9, 
+  3.739217834026285*^9}},ExpressionUUID->"9b6e2114-1111-4eb0-b68a-\
+746446457635"],
+
+Cell[CellGroupData[{
+
+Cell["Goal of Project", "Subsection",
+ CellChangeTimes->{{3.7392197021323395`*^9, 
+  3.7392197305317087`*^9}},ExpressionUUID->"eee54070-d12d-448c-8e8e-\
+94edc6774805"],
+
+Cell["\<\
+The goal of this project is to simulate and study various approximate optimal \
+packing algorithms, and attempt to identify persistent packing structures of \
+these binary systems for various radii ratios.\
+\>", "Text",
+ CellChangeTimes->{{3.739219885716132*^9, 3.739219945927616*^9}, {
+  3.739219991992446*^9, 3.739220008152746*^9}, {3.7392707666243143`*^9, 
+  3.7392707769665756`*^9}},ExpressionUUID->"58c1a7c3-e104-414d-ad01-\
+684b696c515d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Summary of Work", "Subsection",
+ CellChangeTimes->{{3.739220016253559*^9, 
+  3.7392200579545746`*^9}},ExpressionUUID->"fd11519d-2cc1-45b4-a6fb-\
+4bbe2f15bddf"],
+
+Cell["\<\
+In this project, I will attempt to analyze dense packing of many-particle 2D \
+disks of 2 different radii. Given total particle number, particle number \
+ratio and radii ratio, I will simulate approximate convergence to the optimal \
+packing using a set of algorithms, including simple greedy methods, the \
+classical Lubachevsky-Stillinger hard particle compression algorithm (LSA), \
+and a molecular dynamics based variation of LSA. Finally, I will study \
+persistent packing structures or clusters thereof for a variety of different \
+radii ratios.
+\
+\>", "Text",
+ CellChangeTimes->{{3.7392152758481503`*^9, 3.7392153210851808`*^9}, {
+  3.7392155358892317`*^9, 3.7392155581846*^9}, {3.7392176866403975`*^9, 
+  3.7392178286656046`*^9}, {3.7392179298819056`*^9, 3.7392179539755774`*^9}, {
+  3.7392708036777706`*^9, 3.7392708202808256`*^9}, {3.739270851224576*^9, 
+  3.73927103737094*^9}, {3.7392711951311636`*^9, 
+  3.7392712062462044`*^9}},ExpressionUUID->"12a47a12-c15f-447a-ae8e-\
+84aff24707cc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{638, 628},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 166, 3, 96, "Title",ExpressionUUID->"f4174649-a4ac-419a-931e-c1c53ce5f7ee"],
+Cell[CellGroupData[{
+Cell[771, 29, 334, 5, 67, "Section",ExpressionUUID->"9b6e2114-1111-4eb0-b68a-746446457635"],
+Cell[CellGroupData[{
+Cell[1130, 38, 167, 3, 53, "Subsection",ExpressionUUID->"eee54070-d12d-448c-8e8e-94edc6774805"],
+Cell[1300, 43, 454, 8, 78, "Text",ExpressionUUID->"58c1a7c3-e104-414d-ad01-684b696c515d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1791, 56, 165, 3, 53, "Subsection",ExpressionUUID->"fd11519d-2cc1-45b4-a6fb-4bbe2f15bddf"],
+Cell[1959, 61, 1009, 17, 188, "Text",ExpressionUUID->"12a47a12-c15f-447a-ae8e-84aff24707cc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
