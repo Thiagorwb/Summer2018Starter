@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3503,        103]
-NotebookOptionsPosition[      2607,         77]
-NotebookOutlinePosition[      2950,         92]
-CellTagsIndexPosition[      2907,         89]
+NotebookDataLength[      3961,        109]
+NotebookOptionsPosition[      3066,         83]
+NotebookOutlinePosition[      3407,         98]
+CellTagsIndexPosition[      3364,         95]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,13 +42,13 @@ Cell["Goal of Project", "Subsection",
 94edc6774805"],
 
 Cell["\<\
-The goal of this project is to simulate and study various packing algorithms, \
-and attempt to identify persistent packing structures of these binary systems \
-for various radii ratios.\
+The goal of this project is to simulate and study various approximate optimal \
+packing algorithms for circles of 2 different sizes.\
 \>", "Text",
  CellChangeTimes->{{3.739219885716132*^9, 3.739219945927616*^9}, {
-  3.739219991992446*^9, 
-  3.739220008152746*^9}},ExpressionUUID->"58c1a7c3-e104-414d-ad01-\
+  3.739219991992446*^9, 3.739220008152746*^9}, {3.7392707666243143`*^9, 
+  3.7392707769665756`*^9}, {3.739278611878085*^9, 
+  3.7392786532768536`*^9}},ExpressionUUID->"58c1a7c3-e104-414d-ad01-\
 684b696c515d"]
 }, Open  ]],
 
@@ -60,23 +60,29 @@ Cell["Summary of Work", "Subsection",
 4bbe2f15bddf"],
 
 Cell["\<\
-In this project, I will attempt to analyze dense packing of many-particle 2D \
-disks of 2 different radii. Given total particle number, particle number \
-ratio and radii ratio, I will simulate convergence to the optimal packing \
-using a set of algorithms, and then attempt to identify persistent packing \
-structures or clusters thereof for a variety of different ratios.\
+In this project, I attempt to analyze dense packing of many-particle 2D disks \
+of 2 different radii. Given total particle number, particle number ratio and \
+radii ratio, I simulate approximate convergence to the optimal packing using \
+a set of algorithms, including simple greedy methods, the classical \
+Lubachevsky-Stillinger hard particle compression algorithm (LSA), and a \
+molecular dynamics based variation of LSA. Finally, I study persistent \
+packing structures or clusters thereof for a variety of different radii ratios.
+\
 \>", "Text",
  CellChangeTimes->{{3.7392152758481503`*^9, 3.7392153210851808`*^9}, {
   3.7392155358892317`*^9, 3.7392155581846*^9}, {3.7392176866403975`*^9, 
-  3.7392178286656046`*^9}, {3.7392179298819056`*^9, 
-  3.7392179539755774`*^9}},ExpressionUUID->"12a47a12-c15f-447a-ae8e-\
+  3.7392178286656046`*^9}, {3.7392179298819056`*^9, 3.7392179539755774`*^9}, {
+  3.7392708036777706`*^9, 3.7392708202808256`*^9}, {3.739270851224576*^9, 
+  3.73927103737094*^9}, {3.7392711951311636`*^9, 3.7392712062462044`*^9}, {
+  3.739278697631857*^9, 3.739278703618907*^9}, {3.739278734020917*^9, 
+  3.7392787347088437`*^9}},ExpressionUUID->"12a47a12-c15f-447a-ae8e-\
 84aff24707cc"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{759, 553},
-WindowMargins->{{Automatic, -31}, {Automatic, 18}},
+WindowSize->{638, 628},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
 FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
 ]
@@ -97,17 +103,15 @@ Cell[CellGroupData[{
 Cell[771, 29, 334, 5, 67, "Section",ExpressionUUID->"9b6e2114-1111-4eb0-b68a-746446457635"],
 Cell[CellGroupData[{
 Cell[1130, 38, 167, 3, 53, "Subsection",ExpressionUUID->"eee54070-d12d-448c-8e8e-94edc6774805"],
-Cell[1300, 43, 384, 8, 56, "Text",ExpressionUUID->"58c1a7c3-e104-414d-ad01-684b696c515d"]
+Cell[1300, 43, 432, 8, 56, "Text",ExpressionUUID->"58c1a7c3-e104-414d-ad01-684b696c515d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1721, 56, 165, 3, 53, "Subsection",ExpressionUUID->"fd11519d-2cc1-45b4-a6fb-4bbe2f15bddf"],
-Cell[1889, 61, 678, 11, 100, "Text",ExpressionUUID->"12a47a12-c15f-447a-ae8e-84aff24707cc"]
+Cell[1769, 56, 165, 3, 53, "Subsection",ExpressionUUID->"fd11519d-2cc1-45b4-a6fb-4bbe2f15bddf"],
+Cell[1937, 61, 1089, 17, 188, "Text",ExpressionUUID->"12a47a12-c15f-447a-ae8e-84aff24707cc"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
