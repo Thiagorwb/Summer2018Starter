@@ -1,0 +1,184 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5713,        174]
+NotebookOptionsPosition[      4105,        137]
+NotebookOutlinePosition[      4446,        152]
+CellTagsIndexPosition[      4403,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Event Driven MD", "Title",
+ CellChangeTimes->{{3.739483600169942*^9, 
+  3.739483605792446*^9}},ExpressionUUID->"baff1aa1-3dc5-45db-8478-\
+939b55d7ecaa"],
+
+Cell[CellGroupData[{
+
+Cell["Algorithmic notes", "Section",
+ CellChangeTimes->{{3.7394836355159817`*^9, 
+  3.7394836429237075`*^9}},ExpressionUUID->"75d6832c-c816-45ad-a767-\
+0ad2f90c231b"],
+
+Cell[CellGroupData[{
+
+Cell["Procedure", "Subsection",
+ CellChangeTimes->{{3.739484055880247*^9, 
+  3.739484059585926*^9}},ExpressionUUID->"39dc0452-361c-4167-a689-\
+15cda07752cd"],
+
+Cell["\<\
+Store ordered sequence of collisions in PQ, key is time. As particles \
+collide, some event become invalidated\
+\>", "Text",
+ CellChangeTimes->{{3.7394837121915326`*^9, 
+  3.739483757152445*^9}},ExpressionUUID->"6e56eadf-8b31-4a52-8557-\
+74af3d564ee6"],
+
+Cell[CellGroupData[{
+
+Cell["Pop impending event", "Item",
+ CellChangeTimes->{{3.739483762842889*^9, 
+  3.7394837773826017`*^9}},ExpressionUUID->"8eeeac59-0058-4d5e-a686-\
+52e6d8692a49"],
+
+Cell["\<\
+discard event if invalid. Invalid if particle has collided since the time \
+this event was inserted\
+\>", "Item",
+ CellChangeTimes->{{3.739483762842889*^9, 
+  3.739483821234066*^9}},ExpressionUUID->"2c14f70d-4c91-4a8e-a94b-\
+917ab7ed3090"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["c", "ij"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2c3f5dd2-7f7f-4366-b5df-cd2e0af62f1e"],
+ "between particles ",
+ StyleBox["i",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["j ",
+  FontSlant->"Italic"]
+}], "Item",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 
+  3.7394838902985935`*^9}},ExpressionUUID->"b85b1087-8889-4547-880e-\
+444d1359148e"],
+
+Cell[CellGroupData[{
+
+Cell["advance particles along straight line trajectory", "Subitem",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 
+  3.739483912599844*^9}},ExpressionUUID->"2b36bebb-6998-4ad3-a774-\
+4efc073dc69f"],
+
+Cell["update particle velocieties", "Subitem",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 
+  3.739483923937147*^9}},ExpressionUUID->"cbf9e61a-d3f7-4484-9c81-\
+07b4e887d089"],
+
+Cell["\<\
+determine all future collisions with either i or j, insert into PQ\
+\>", "Subitem",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 
+  3.739483975845619*^9}},ExpressionUUID->"419b10e5-54c8-4998-b92d-\
+a098d6e3157d"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["c", "iw"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9cddcff6-cade-4a45-916a-19b683d9765d"],
+ StyleBox[" between boundary wall and particle i",
+  FontSlant->"Italic"]
+}], "Item",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 3.7394839483196282`*^9}, {3.739483983264855*^9, 
+  3.7394840337023344`*^9}},ExpressionUUID->"24a028ea-231c-4cba-ae45-\
+d9f15d0077c9"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Collision Prediction", "Subsection",
+ CellChangeTimes->{{3.739483762842889*^9, 3.7394838189444313`*^9}, {
+  3.739483855284277*^9, 3.7394839483196282`*^9}, {3.739483983264855*^9, 
+  3.739484046373043*^9}},ExpressionUUID->"363d423b-888c-4a96-b7fd-\
+0e579034553e"],
+
+Cell["contact with horizontal wall", "Item",
+ CellChangeTimes->{{3.7394841248565025`*^9, 
+  3.739484136444315*^9}},ExpressionUUID->"fdc17173-44f1-481b-8935-\
+e1f1860ad0b2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{639, 628},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 158, 3, 96, "Title",ExpressionUUID->"baff1aa1-3dc5-45db-8478-939b55d7ecaa"],
+Cell[CellGroupData[{
+Cell[763, 29, 166, 3, 67, "Section",ExpressionUUID->"75d6832c-c816-45ad-a767-0ad2f90c231b"],
+Cell[CellGroupData[{
+Cell[954, 36, 157, 3, 53, "Subsection",ExpressionUUID->"39dc0452-361c-4167-a689-15cda07752cd"],
+Cell[1114, 41, 262, 6, 56, "Text",ExpressionUUID->"6e56eadf-8b31-4a52-8557-74af3d564ee6"],
+Cell[CellGroupData[{
+Cell[1401, 51, 163, 3, 31, "Item",ExpressionUUID->"8eeeac59-0058-4d5e-a686-52e6d8692a49"],
+Cell[1567, 56, 249, 6, 51, "Item",ExpressionUUID->"2c14f70d-4c91-4a8e-a94b-917ab7ed3090"],
+Cell[1819, 64, 479, 16, 33, "Item",ExpressionUUID->"b85b1087-8889-4547-880e-444d1359148e"],
+Cell[CellGroupData[{
+Cell[2323, 84, 244, 4, 26, "Subitem",ExpressionUUID->"2b36bebb-6998-4ad3-a774-4efc073dc69f"],
+Cell[2570, 90, 223, 4, 26, "Subitem",ExpressionUUID->"cbf9e61a-d3f7-4484-9c81-07b4e887d089"],
+Cell[2796, 96, 270, 6, 26, "Subitem",ExpressionUUID->"419b10e5-54c8-4998-b92d-a098d6e3157d"]
+}, Open  ]],
+Cell[3081, 105, 493, 12, 31, "Item",ExpressionUUID->"24a028ea-231c-4cba-ae45-d9f15d0077c9"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3623, 123, 267, 4, 53, "Subsection",ExpressionUUID->"363d423b-888c-4a96-b7fd-0e579034553e"],
+Cell[3893, 129, 172, 3, 31, "Item",ExpressionUUID->"fdc17173-44f1-481b-8935-e1f1860ad0b2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
